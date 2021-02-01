@@ -56,9 +56,27 @@ namespace Weapons
             "AUG",
             "DMR 14"
         };
-        protected string[] Sniper = { };
-        protected string[] LMG = { };
-        protected string[] AR = { };
+        protected string[] Sniper =
+        {
+            "Pelington 703",
+            "LW3 - Tundra",
+            "M82"
+        };
+        protected string[] LMG = 
+        {
+            "Stoner 63",
+            "RPD",
+            "M60"
+        };
+        protected string[] AR = 
+        {
+            "XM4",
+            "AK-47",
+            "Krig 6",
+            "QBZ-83",
+            "FFAR 1",
+            "Groza"     //Battlepass weapon?
+        };
         protected string[] Melee = { "Knife" };
         /// <summary>
         /// Things that shoot that go boom

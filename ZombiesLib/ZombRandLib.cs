@@ -6,20 +6,44 @@ namespace ZombiesLib
     public class ZombRandLib : Weapons.WeaponNames
     {
         readonly Random rand = new Random();
+        #region Info
+        string explName = "Explosives";
+        #endregion Info
 
         #region SetInfo
+        public void ApplyOptions(bool[] Sets)
+        {
+            SetContent(Sets[0]);
+            SetDLC(Sets[1]);
+            SetOutofCategory_Box(Sets[2]);
+            SetOutofCategory_Wall(Sets[3]);
+
+        }
+        public void TrueRandom()
+        {
+            SetContent(Convert.ToBoolean(rand.Next(2)));
+            SetDLC(Convert.ToBoolean(rand.Next(2)));
+            SetOutofCategory();
+        }
         /// <summary>
         /// Sets the value of content
         /// </summary>
         /// <param name="cont"></param>
-        public void SetContent(bool cont)
+        private string SetContent(bool cont)
         {
             Content = cont;
             if (Content)
-                WeaponCategories[8] = "Content Cannons";
+                explName = "Content Cannons";
             else
-                WeaponCategories[8] = "Explosives";
+                explName = "Explosives";
+
+            return explName;
         }
+        private void SetDLC(bool cont)
+        {
+            DLC_Enabled = cont;
+        }
+        
         #region OutofCategory
         /// <summary>
         /// Sets the out of category of box weapons
