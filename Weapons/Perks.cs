@@ -20,10 +20,10 @@ namespace Weapons
         };
         public string[] WildCard { get; } =
         {
-            "Danger Close",
-            "Law Breaker",
-            "GunFighter",
-            "Perk Greed"
+            "Danger Close", //2x Tact/Lethal + more ammo
+            "Law Breaker", //Find use
+            "GunFighter", //Weapon for any category for both slots
+            "Perk Greed" //2x more perks (Find other conditions)
         };
     }
 
