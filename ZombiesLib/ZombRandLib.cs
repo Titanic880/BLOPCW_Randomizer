@@ -1,85 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ZombiesLib
 {
-    public class ZombRandLib
+    public class ZombRandLib : Weapons.WeaponNames
     {
-        Random rand = new Random();
-        #region Information
-        private string[] WeaponCategories =
-        {
-            "SMG",
-            "Shotgun",
-            "Pistol",
-            "Tactical Rifle",
-            "Snipers",
-            "LMG'S",
-            "Assault Rifles",
-            "Melee",
-            "Explosives",
-            "DLC"
-        };
-        /// <summary>
-        /// List of all SMGS
-        /// </summary>
-        private string[] SMG = 
-        {
-            "MP5",
-            "Milano 821",
-            "Ak-74u",
-            "KSP 45",
-            "Bullfrog",
-            "Mac-10" //Move to DLC After First Season ??
-        };
-        /// <summary>
-        /// List All Shotguns
-        /// </summary>
-        private string[] Shotgun = 
-        {
-            "Hauer 77",
-            "Gallo SA12"
-        };
-        /// <summary>
-        /// 
-        /// </summary>
-        private string[] Pistol = 
-        {
-            "1911",
-            "Magnum",
-            "Diamatti"
-        };
-        private string[] TacR = {};
-        private string[] Sniper = {};
-        private string[] LMG = {};
-        private string[] AR = {};
-        private string[] Melee = { "Knife" };
-        /// <summary>
-        /// Things that shoot that go boom
-        /// </summary>
-        private string[] Expl = 
-        {
-            "Cigma 2",
-            "RPG-7",
-            "M79"
-        };
-        /// <summary>
-        /// Weapons that are obtained from DLC/Cheevos (Does not include Mac 10 (yet))
-        /// </summary>
-        private string[] DLC = 
-        {
-            "Street Sweeper",
-            "Sledgehammer",
-            "Wakizashi"
-        };
-        #endregion Information
-
-        #region Info
-
-        #endregion Info
+        readonly Random rand = new Random();
 
         #region SetInfo
         /// <summary>

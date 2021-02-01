@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E421BED-EC7E-4D04-A5A7-4D1D4477EBBF}</ProjectGuid>
+    <ProjectGuid>{B288139D-3A2C-4027-8A63-A3065A82C87D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ZombiesLib</RootNamespace>
-    <AssemblyName>ZombiesLib</AssemblyName>
+    <RootNamespace>Weapons</RootNamespace>
+    <AssemblyName>Weapons</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ZombRandLib.cs" />
+    <Compile Include="WeaponNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Weapons\Information.csproj">
-      <Project>{b288139d-3a2c-4027-8a63-a3065a82c87d}</Project>
-      <Name>Information</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
