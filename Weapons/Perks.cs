@@ -71,7 +71,7 @@ namespace Weapons
             "StimShot",
             "Flashbang",
             "Decoy",
-            "Smoke Grenade"     //Moved to back due to not existing in zombies
+            "Smoke Grenade/Monkey Bomb"     //Split on the '/' depending on the mode
         };
         public string[] Lethal { get; } =
         {
