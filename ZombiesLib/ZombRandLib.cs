@@ -55,7 +55,6 @@ namespace ZombiesLib
 
         #endregion Info
 
-
         #region SetInfo
         public void ApplyOptions(bool[] Sets)
         {
@@ -63,7 +62,10 @@ namespace ZombiesLib
             SetDLC(Sets[1]);
             SetOutofCategory_Box(Sets[2]);
             SetOutofCategory_Wall(Sets[3]);
-
+            FR = Sets[4];
+            SR = Sets[5];
+            TR = Sets[6];
+            LR = Sets[7];
         }
         public void TrueRandom()
         {
@@ -76,7 +78,6 @@ namespace ZombiesLib
             LR = rnd[1];
             SR = rnd[2];
             TR = rnd[3];
-
             randEquipment();
             PerkOrder();
         }
@@ -86,6 +87,13 @@ namespace ZombiesLib
             SetDLC(input[1]);
             SetOutofCategory_Box(input[2]);
             SetOutofCategory_Wall(input[3]);
+
+            FR = input[4];
+            LR = input[5];
+            SR = input[6];
+            TR = input[7];
+            randEquipment();
+            if(input[8]) PerkOrder();
         }
 
         /// <summary>
@@ -134,8 +142,6 @@ namespace ZombiesLib
         }
         #endregion OutofCategory
         #endregion SetInfo
-
-
 
         #region Randomize
         /// <summary>

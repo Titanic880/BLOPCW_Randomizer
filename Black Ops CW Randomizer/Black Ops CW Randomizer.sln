@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black Ops CW Randomizer", "Black Ops CW Randomizer.csproj", "{661A15DB-D8A4-4747-AC23-A1727F0B0EE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black Ops CW Randomizer", "Black Ops CW Randomizer.csproj", "{58782186-E75C-40A0-992D-C8A6C6EBEB91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombiesLib", "..\ZombiesLib\ZombiesLib.csproj", "{2E421BED-EC7E-4D04-A5A7-4D1D4477EBBF}"
 EndProject
@@ -17,10 +17,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{661A15DB-D8A4-4747-AC23-A1727F0B0EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{661A15DB-D8A4-4747-AC23-A1727F0B0EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{661A15DB-D8A4-4747-AC23-A1727F0B0EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{661A15DB-D8A4-4747-AC23-A1727F0B0EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58782186-E75C-40A0-992D-C8A6C6EBEB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58782186-E75C-40A0-992D-C8A6C6EBEB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58782186-E75C-40A0-992D-C8A6C6EBEB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58782186-E75C-40A0-992D-C8A6C6EBEB91}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E421BED-EC7E-4D04-A5A7-4D1D4477EBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E421BED-EC7E-4D04-A5A7-4D1D4477EBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E421BED-EC7E-4D04-A5A7-4D1D4477EBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +38,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0F5EE2F6-5976-4A03-AACA-1F0803A32B5E}
+		SolutionGuid = {44CD0551-106D-4889-B78B-C82E664AA337}
 	EndGlobalSection
 EndGlobal
