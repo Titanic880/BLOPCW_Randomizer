@@ -82,14 +82,18 @@ namespace ZombiesLib
             SetDLC(Convert.ToBoolean(rand.Next(2)));
             SetOutofCategory();
 
-            bool[] rnd = {Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)) };
+            bool[] rnd = { Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)) };
             FR = rnd[0];
             LR = rnd[1];
             SR = rnd[2];
             TR = rnd[3];
             randEquipment();
             PerkOrder();
-            RandomWeapon();
+            if (Convert.ToBoolean(rand.Next(2)))
+            {
+                RandomWeapon();
+                Wep = true;
+            }
         }
         public void Random()
         {
@@ -193,7 +197,7 @@ namespace ZombiesLib
                         break;
                     case 8:
                         ret = explName;
-                        ret += Expl[rand.Next(Expl.Length)];
+                        ret += ": "+Expl[rand.Next(Expl.Length)];
                         break;
                 }
             }
@@ -223,7 +227,6 @@ namespace ZombiesLib
                 OrderedPerks += (i+1)+": "+random[i] + ',';
             OrderedPerks.Trim(',');
         }
-
         #endregion Randomize
     }
 }

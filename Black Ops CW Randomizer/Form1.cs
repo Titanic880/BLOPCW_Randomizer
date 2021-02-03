@@ -19,7 +19,6 @@ namespace Black_Ops_CW_Randomizer
             this.Width = 186;
             this.Height = 140;
         }
-
         private void BtnMult_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Mode has not be implemented yet~!");

@@ -28,7 +28,6 @@
             "Perk Greed" //2x more perks (Find other conditions)
         };
     }
-
     /// <summary>
     /// Perks related to Zombies
     /// </summary>
@@ -55,7 +54,6 @@
             "Aether Shroud",
             "Ring of Fire"
         };
-
         public string[] Support { get; } =
         {
             "Combat Bow",
