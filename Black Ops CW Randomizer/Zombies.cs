@@ -50,6 +50,7 @@ namespace Black_Ops_CW_Randomizer
                 if(BtnOptions.Text.Trim() == "Randomize by Options")
                 {
                     zomg.Random(Settings);
+                    lst.Items.Clear();
                     SetList();
                 }
             }
@@ -58,6 +59,7 @@ namespace Black_Ops_CW_Randomizer
         private void BtnRandomize_Click(object sender, EventArgs e)
         {
             zomg.TrueRandom();
+            lst.Items.Clear();
             SetList();
         }
 
