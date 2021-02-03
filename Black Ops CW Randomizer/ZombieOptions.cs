@@ -5,8 +5,8 @@ namespace Black_Ops_CW_Randomizer
 {
     public partial class ZombieOptions : UserControl
     {
-        private ZombRandLib lib;
-        Zombies zomb = null;
+        private readonly ZombRandLib lib;
+        private readonly Zombies zomb = null;
         public ZombieOptions(ZombRandLib lib, Zombies zmg)
         {
             InitializeComponent();

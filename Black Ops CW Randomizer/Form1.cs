@@ -32,9 +32,11 @@ namespace Black_Ops_CW_Randomizer
 
         private void BtnZom_Click(object sender, EventArgs e)
         {
-            maincont = new Zombies();
-            maincont.Left = 12;
-            maincont.Top = 12;
+            maincont = new Zombies
+            {
+                Left = 12,
+                Top = 12
+            };
 
             this.Width = maincont.Width + 36;
             this.Height = 270;

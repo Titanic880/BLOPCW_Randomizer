@@ -13,9 +13,9 @@ namespace Black_Ops_CW_Randomizer
 {
     public partial class Zombies : UserControl
     {
-        Random rng = new Random();
+        readonly Random rng = new Random();
 
-        ZombRandLib zomg = null;
+        readonly ZombRandLib zomg = null;
         ZombieOptions zom = null;
         public string[] Sett { get; private set; } = new string[] { null, null, null};
         public Zombies()
@@ -33,15 +33,17 @@ namespace Black_Ops_CW_Randomizer
         {
             if(zom == null)
             {
-                zom = new ZombieOptions(zomg,this);
-                zom.Left = Parent.Controls[0].Right + 12;
-                zom.Top = 12;
+                zom = new ZombieOptions(zomg, this)
+                {
+                    Left = Parent.Controls[0].Right + 12,
+                    Top = 12
+                };
                 Parent.Height = 395;
                 Parent.Width = 440; //217 173 + 36
                 Parent.Controls.Add(zom);
                 BtnOptions.Text = "Randomize by Options";
-                BtnOptions.Height = BtnOptions.Height * 2;
-                BtnRandomize.Height = BtnRandomize.Height * 2;
+                BtnOptions.Height *= 2;
+                BtnRandomize.Height *= 2;
             }
             else
             {
