@@ -6,10 +6,12 @@ namespace Black_Ops_CW_Randomizer
     public partial class ZombieOptions : UserControl
     {
         private ZombRandLib lib;
-        public ZombieOptions(ZombRandLib lib)
+        Zombies zomb = null;
+        public ZombieOptions(ZombRandLib lib, Zombies zmg)
         {
             InitializeComponent();
             this.lib = lib;
+            zomb = zmg;
         }
 
         private void BtnApply_Click(object sender, EventArgs e)
@@ -37,7 +39,8 @@ namespace Black_Ops_CW_Randomizer
                 TR,
                 cbPerks.Checked
             };
-            lib.Random(Settings);
+
+            zomb.SetSettings(Settings);
             BtnApply.Enabled = false;
             MessageBox.Show("New Settings Applied!");
         }

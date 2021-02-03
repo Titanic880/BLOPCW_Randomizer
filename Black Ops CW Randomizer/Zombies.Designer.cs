@@ -70,7 +70,7 @@ namespace Black_Ops_CW_Randomizer
             this.Controls.Add(this.BtnRandomize);
             this.Controls.Add(this.listBox1);
             this.Name = "Zombies";
-            this.Size = new System.Drawing.Size(217, 216);
+            this.Size = new System.Drawing.Size(217, 235);
             this.ResumeLayout(false);
 
         }

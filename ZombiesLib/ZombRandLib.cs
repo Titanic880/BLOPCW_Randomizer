@@ -83,6 +83,8 @@ namespace ZombiesLib
         }
         public void Random(bool[] input)
         {
+            if (input == null)
+                return;
             SetContent(input[0]);
             SetDLC(input[1]);
             SetOutofCategory_Box(input[2]);
