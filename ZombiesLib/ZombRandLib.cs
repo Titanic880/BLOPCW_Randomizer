@@ -1,14 +1,34 @@
 ﻿using System;
 
-
 namespace ZombiesLib
 {
     public class ZombRandLib : Weapons.WeaponNames
     {
         readonly Random rand = new Random();
+        Weapons.ZmPerks perks = new Weapons.ZmPerks();
+
         #region Info
         string explName = "Explosives";
         #endregion Info
+
+        #region SafeGuards
+        /// <summary>
+        /// Changes the name Explosive to "Content Cannons"
+        /// </summary>
+        public bool Content { get; private set; } = false;
+        /// <summary>
+        /// Flag that says to allow the DLC weapons 
+        /// </summary>
+        public bool DLC_Enabled { get; private set; } = false;
+        /// <summary>
+        /// bool to determine if out of category weapons are good from box
+        /// </summary>
+        public bool Box_OutofCat { get; private set; } = false;
+        /// <summary>
+        /// bool to determine if out of category weapons are good from wall
+        /// </summary>
+        public bool Wall_OutofCat { get; private set; } = false;
+        #endregion SafeGuards
 
         #region SetInfo
         public void ApplyOptions(bool[] Sets)
@@ -25,6 +45,14 @@ namespace ZombiesLib
             SetDLC(Convert.ToBoolean(rand.Next(2)));
             SetOutofCategory();
         }
+        public void Random(bool[] input)
+        {
+            SetContent(input[0]);
+            SetDLC(input[1]);
+            SetOutofCategory_Box(input[2]);
+            SetOutofCategory_Wall(input[3]);
+        }
+
         /// <summary>
         /// Sets the value of content
         /// </summary>
@@ -73,27 +101,10 @@ namespace ZombiesLib
         #endregion OutofCategory
         #endregion SetInfo
 
-        #region SafeGuards
-        /// <summary>
-        /// Changes the name Explosive to "Content Cannons"
-        /// </summary>
-        public bool Content { get; private set; } = false;
-        /// <summary>
-        /// Flag that says to allow the DLC weapons 
-        /// </summary>
-        public bool DLC_Enabled { get; private set; } = false;
-        /// <summary>
-        /// bool to determine if out of category weapons are good from box
-        /// </summary>
-        public bool Box_OutofCat { get; private set; } = false;
-        /// <summary>
-        /// bool to determine if out of category weapons are good from wall
-        /// </summary>
-        public bool Wall_OutofCat { get; private set; } = false;
-        #endregion SafeGuards
 
-        #region ???
 
-        #endregion ???
+        #region Randomize
+
+        #endregion Randomize
     }
 }

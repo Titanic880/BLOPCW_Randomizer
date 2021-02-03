@@ -7,6 +7,10 @@ namespace Weapons
     /// </summary>
     public class MPPerks : TacticalEquipment
     {
+        public MPPerks()
+        {
+            Tactical[5] = Tactical[5].Split('/')[0];
+        }
         //Will contain Wildcards
         public string[] Field { get; } =
         {
@@ -32,6 +36,10 @@ namespace Weapons
     /// </summary>
     public class ZmPerks : TacticalEquipment
     {
+        public ZmPerks()
+        {
+            Tactical[5] = Tactical[5].Split('/')[1];
+        }
         public string[] Perks { get; } =
         {
             "Jugger-Nog",
