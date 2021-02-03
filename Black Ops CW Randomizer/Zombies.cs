@@ -17,7 +17,6 @@ namespace Black_Ops_CW_Randomizer
 
         ZombRandLib zomg = null;
         ZombieOptions zom = null;
-        public bool[] Settings { get; private set; } = null;
         public string[] Sett { get; private set; } = new string[] { null, null, null};
         public Zombies()
         {
@@ -25,9 +24,8 @@ namespace Black_Ops_CW_Randomizer
             zomg = new ZombRandLib();
         }
 
-        public void SetSettings(bool[] set, string[] str)
+        public void SetSettings(string[] str)
         {
-            Settings = set;
             Sett = str;
         }
 
@@ -49,7 +47,7 @@ namespace Black_Ops_CW_Randomizer
             {
                 if(BtnOptions.Text.Trim() == "Randomize by Options")
                 {
-                    zomg.Random(Settings);
+                    zomg.Random();
                     lst.Items.Clear();
                     SetList();
                 }

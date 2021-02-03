@@ -56,6 +56,8 @@ namespace ZombiesLib
         /// bool to determine if out of category weapons are good from wall
         /// </summary>
         public bool Wall_OutofCat { get; private set; } = false;
+
+        public bool PerkOrd { get; private set; } = false;
         #endregion SafeGuards
 
         #endregion Info
@@ -71,7 +73,8 @@ namespace ZombiesLib
             SR = Sets[5];
             TR = Sets[6];
             LR = Sets[7];
-            Wep = Sets[8];
+            PerkOrd = Sets[8];
+            Wep = Sets[9];
         }
         public void TrueRandom()
         {
@@ -88,22 +91,11 @@ namespace ZombiesLib
             PerkOrder();
             RandomWeapon();
         }
-        public void Random(bool[] input)
+        public void Random()
         {
-            if (input == null)
-                return;
-            SetContent(input[0]);
-            SetDLC(input[1]);
-            if(input[2]) SetOutofCategory_Box(Convert.ToBoolean(rand.Next(2)));
-            if(input[3]) SetOutofCategory_Wall(Convert.ToBoolean(rand.Next(2)));
-
-            FR = input[4];
-            LR = input[5];
-            SR = input[6];
-            TR = input[7];
             randEquipment();
-            if(input[8]) PerkOrder();
-            if (input[9]) RandomWeapon();
+            if(PerkOrd) PerkOrder();
+            if (Wep) RandomWeapon();
         }
 
         /// <summary>
@@ -214,10 +206,10 @@ namespace ZombiesLib
         /// <returns></returns>
         private void randEquipment()
         {
-            if(FR)FieldRand = perks.FieldUpgrades[rand.Next(perks.FieldUpgrades.Length - 1)];
-            if(SR)SupportRand = perks.Support[rand.Next(perks.Support.Length - 1)];
-            if(TR)TacticalRand = perks.Tactical[rand.Next(perks.Tactical.Length - 1)];
-            if(LR)LethalRand = perks.Lethal[rand.Next(perks.Lethal.Length - 1)];
+            if(FR) FieldRand = perks.FieldUpgrades[rand.Next(perks.FieldUpgrades.Length - 1)];
+            if(SR) SupportRand = perks.Support[rand.Next(perks.Support.Length - 1)];
+            if(TR) TacticalRand = perks.Tactical[rand.Next(perks.Tactical.Length - 1)];
+            if(LR) LethalRand = perks.Lethal[rand.Next(perks.Lethal.Length - 1)];
         }
         /// <summary>
         /// Randomize the order that you would obtain perks (comma seperated)

@@ -47,7 +47,8 @@ namespace Black_Ops_CW_Randomizer
                 comBoxTact.Text
             };
 
-            zomb.SetSettings(Settings, a);
+            lib.ApplyOptions(Settings);
+            zomb.SetSettings(a);
             BtnApply.Enabled = false;
             MessageBox.Show("New Settings Applied!");
         }
