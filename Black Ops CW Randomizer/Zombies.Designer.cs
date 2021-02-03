@@ -50,6 +50,7 @@ namespace Black_Ops_CW_Randomizer
             this.BtnRandomize.TabIndex = 1;
             this.BtnRandomize.Text = "Randomize!";
             this.BtnRandomize.UseVisualStyleBackColor = true;
+            this.BtnRandomize.Click += new System.EventHandler(this.BtnRandomize_Click);
             // 
             // BtnOptions
             // 
@@ -59,6 +60,7 @@ namespace Black_Ops_CW_Randomizer
             this.BtnOptions.TabIndex = 2;
             this.BtnOptions.Text = "Options";
             this.BtnOptions.UseVisualStyleBackColor = true;
+            this.BtnOptions.Click += new System.EventHandler(this.BtnOptions_Click);
             // 
             // Zombies
             // 

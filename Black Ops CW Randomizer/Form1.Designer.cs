@@ -31,7 +31,6 @@ namespace Black_Ops_CW_Randomizer
         {
             this.BtnMult = new System.Windows.Forms.Button();
             this.BtnZom = new System.Windows.Forms.Button();
-            this.zombies1 = new Black_Ops_CW_Randomizer.Zombies();
             this.SuspendLayout();
             // 
             // BtnMult
@@ -54,19 +53,11 @@ namespace Black_Ops_CW_Randomizer
             this.BtnZom.UseVisualStyleBackColor = true;
             this.BtnZom.Click += new System.EventHandler(this.BtnZom_Click);
             // 
-            // zombies1
-            // 
-            this.zombies1.Location = new System.Drawing.Point(12, 12);
-            this.zombies1.Name = "zombies1";
-            this.zombies1.Size = new System.Drawing.Size(150, 150);
-            this.zombies1.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
-            this.Controls.Add(this.zombies1);
             this.Controls.Add(this.BtnZom);
             this.Controls.Add(this.BtnMult);
             this.Name = "Form1";
@@ -79,7 +70,6 @@ namespace Black_Ops_CW_Randomizer
 
         private System.Windows.Forms.Button BtnMult;
         private System.Windows.Forms.Button BtnZom;
-        private Zombies zombies1;
     }
 }
 

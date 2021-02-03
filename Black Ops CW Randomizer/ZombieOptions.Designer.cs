@@ -54,6 +54,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbWeapon.TabIndex = 0;
             this.cbWeapon.Text = "Randomize Weapon";
             this.cbWeapon.UseVisualStyleBackColor = true;
+            this.cbWeapon.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbWeapon.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // cbField
             // 
@@ -64,6 +66,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbField.TabIndex = 1;
             this.cbField.Text = "Randomize Field Upgrade";
             this.cbField.UseVisualStyleBackColor = true;
+            this.cbField.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbField.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // cbPerks
             // 
@@ -74,6 +78,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbPerks.TabIndex = 2;
             this.cbPerks.Text = "Random Perk Order";
             this.cbPerks.UseVisualStyleBackColor = true;
+            this.cbPerks.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbPerks.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // comBoxSupport
             // 
@@ -87,6 +93,7 @@ namespace Black_Ops_CW_Randomizer
             this.comBoxSupport.Size = new System.Drawing.Size(163, 21);
             this.comBoxSupport.TabIndex = 3;
             this.comBoxSupport.Text = "None";
+            this.comBoxSupport.TextChanged += new System.EventHandler(this.Enable);
             // 
             // comBoxTact
             // 
@@ -100,6 +107,7 @@ namespace Black_Ops_CW_Randomizer
             this.comBoxTact.Size = new System.Drawing.Size(163, 21);
             this.comBoxTact.TabIndex = 4;
             this.comBoxTact.Text = "None";
+            this.comBoxTact.TextChanged += new System.EventHandler(this.Enable);
             // 
             // combBoxLethal
             // 
@@ -113,6 +121,7 @@ namespace Black_Ops_CW_Randomizer
             this.combBoxLethal.Size = new System.Drawing.Size(163, 21);
             this.combBoxLethal.TabIndex = 5;
             this.combBoxLethal.Text = "None";
+            this.combBoxLethal.TextChanged += new System.EventHandler(this.Enable);
             // 
             // lbl
             // 
@@ -160,6 +169,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbCont.TabIndex = 10;
             this.cbCont.Text = "???";
             this.cbCont.UseVisualStyleBackColor = true;
+            this.cbCont.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbCont.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // cbDLC
             // 
@@ -170,6 +181,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbDLC.TabIndex = 11;
             this.cbDLC.Text = "Enable Unlockable Weapons";
             this.cbDLC.UseVisualStyleBackColor = true;
+            this.cbDLC.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbDLC.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // cbBox
             // 
@@ -180,6 +193,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbBox.TabIndex = 12;
             this.cbBox.Text = "Random Box Banning";
             this.cbBox.UseVisualStyleBackColor = true;
+            this.cbBox.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbBox.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // cbWall
             // 
@@ -190,6 +205,8 @@ namespace Black_Ops_CW_Randomizer
             this.cbWall.TabIndex = 13;
             this.cbWall.Text = "Random Wall Banning";
             this.cbWall.UseVisualStyleBackColor = true;
+            this.cbWall.CheckedChanged += new System.EventHandler(this.Enable);
+            this.cbWall.CheckStateChanged += new System.EventHandler(this.Enable);
             // 
             // ZombieOptions
             // 

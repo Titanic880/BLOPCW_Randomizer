@@ -36,7 +36,7 @@
     {
         public ZmPerks()
         {
-            Tactical[5] = Tactical[5].Split('/')[1];
+            Tactical[4] = Tactical[4].Split('/')[1];
         }
         public string[] Perks { get; } =
         {

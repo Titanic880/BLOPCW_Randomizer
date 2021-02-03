@@ -38,7 +38,12 @@ namespace Black_Ops_CW_Randomizer
                 cbPerks.Checked
             };
             lib.Random(Settings);
+            BtnApply.Enabled = false;
             MessageBox.Show("New Settings Applied!");
+        }
+        private void Enable(object sender, EventArgs e)
+        {
+            BtnApply.Enabled = true;
         }
     }
 }
