@@ -36,7 +36,7 @@ namespace Black_Ops_CW_Randomizer
                 zom = new ZombieOptions(zomg,this);
                 zom.Left = Parent.Controls[0].Right + 12;
                 zom.Top = 12;
-                Parent.Height = 375;
+                Parent.Height = 395;
                 Parent.Width = 440; //217 173 + 36
                 Parent.Controls.Add(zom);
                 BtnOptions.Text = "Randomize by Options";
