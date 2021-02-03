@@ -5,11 +5,34 @@ namespace ZombiesLib
     public class ZombRandLib : Weapons.WeaponNames
     {
         readonly Random rand = new Random();
-        Weapons.ZmPerks perks = new Weapons.ZmPerks();
+        readonly Weapons.ZmPerks perks = new Weapons.ZmPerks();
 
         #region Info
         string explName = "Explosives";
-        #endregion Info
+
+        public string WeaponRand { get; private set; } = null;
+        public string FieldRand { get; private set; } = null;
+        public string OrderedPerks { get; private set; } = null;
+        public string SupportRand { get; private set; } = null;
+        public string TacticalRand { get; private set; } = null;
+        public string LethalRand { get; private set; } = null;
+
+        /// <summary>
+        /// Field Upgrade
+        /// </summary>
+        public bool FR{ get; private set; } = false;
+        /// <summary>
+        /// Support
+        /// </summary>
+        public bool SR { get; private set; } = false;
+        /// <summary>
+        /// Tactical
+        /// </summary>
+        public bool TR { get; private set; } = false; 
+        /// <summary>
+        /// Lethal
+        /// </summary>
+        public bool LR { get; private set; } = false; 
 
         #region SafeGuards
         /// <summary>
@@ -30,6 +53,9 @@ namespace ZombiesLib
         public bool Wall_OutofCat { get; private set; } = false;
         #endregion SafeGuards
 
+        #endregion Info
+
+
         #region SetInfo
         public void ApplyOptions(bool[] Sets)
         {
@@ -44,6 +70,15 @@ namespace ZombiesLib
             SetContent(Convert.ToBoolean(rand.Next(2)));
             SetDLC(Convert.ToBoolean(rand.Next(2)));
             SetOutofCategory();
+
+            bool[] rnd = {Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)), Convert.ToBoolean(rand.Next(2)) };
+            FR = rnd[0];
+            LR = rnd[1];
+            SR = rnd[2];
+            TR = rnd[3];
+
+            randEquipment();
+            PerkOrder();
         }
         public void Random(bool[] input)
         {
@@ -59,8 +94,7 @@ namespace ZombiesLib
         /// <param name="cont"></param>
         private string SetContent(bool cont)
         {
-            Content = cont;
-            if (Content)
+            if (cont)
                 explName = "Content Cannons";
             else
                 explName = "Explosives";
@@ -71,7 +105,7 @@ namespace ZombiesLib
         {
             DLC_Enabled = cont;
         }
-        
+
         #region OutofCategory
         /// <summary>
         /// Sets the out of category of box weapons
@@ -105,51 +139,12 @@ namespace ZombiesLib
 
         #region Randomize
         /// <summary>
-        /// Random field upgrade
-        /// </summary>
-        private void Field()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Randomize the order that you would obtain perks (comma seperated)
-        /// </summary>
-        /// <returns></returns>
-        private string PerkOrder()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Options :: Banned Specific, All but Specified banned, None
-        /// </summary>
-        /// <returns></returns>
-        private string Support()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Options :: Banned Specific, All but Specified banned, None
-        /// </summary>
-        /// <returns></returns>
-        private string Tactical()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// Options :: Banned Specific, All but Specified banned, None
-        /// </summary>
-        /// <returns></returns>
-        private string Lethal()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
         /// Returns category and Weapon (Comma seperated)
         /// </summary>
         /// <returns></returns>
-        private string RandomWeapon()
+        private void RandomWeapon()
         {
-            int Category = rand.Next(WeaponCategories.Length-1);
+            int Category = rand.Next(WeaponCategories.Length - 1);
             string ret = WeaponCategories[Category] + ",";
             ///Checks to see if the category is DLC, and if it is enabled
             if (Category == 9 && DLC_Enabled)
@@ -160,6 +155,7 @@ namespace ZombiesLib
                 RandomWeapon();
             else
             {
+                ///Find a better method ?
                 switch (Category)
                 {
                     case 0:
@@ -193,11 +189,29 @@ namespace ZombiesLib
                         break;
                 }
             }
-
-
-
-            return ret;
+            WeaponRand = ret;
         }
+
+        /// <summary>
+        /// Options :: Banned Specific, All but Specified banned, None
+        /// </summary>
+        /// <returns></returns>
+        private void randEquipment()
+        {
+            if(FR)FieldRand = perks.FieldUpgrades[rand.Next(perks.FieldUpgrades.Length - 1)];
+            if(SR)SupportRand = perks.Support[rand.Next(perks.Support.Length - 1)];
+            if(TR)TacticalRand = perks.Tactical[rand.Next(perks.Tactical.Length - 1)];
+            if(LR)LethalRand = perks.Lethal[rand.Next(perks.Lethal.Length - 1)];
+        }
+        /// <summary>
+        /// Randomize the order that you would obtain perks (comma seperated)
+        /// </summary>
+        /// <returns></returns>
+        private void PerkOrder()
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion Randomize
     }
 }

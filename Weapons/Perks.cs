@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Weapons
+﻿namespace Weapons
 {
     /// <summary>
     /// Perks related to multiplayer
