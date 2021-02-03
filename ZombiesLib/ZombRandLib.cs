@@ -94,8 +94,8 @@ namespace ZombiesLib
                 return;
             SetContent(input[0]);
             SetDLC(input[1]);
-            SetOutofCategory_Box(input[2]);
-            SetOutofCategory_Wall(input[3]);
+            if(input[2]) SetOutofCategory_Box(Convert.ToBoolean(rand.Next(2)));
+            if(input[3]) SetOutofCategory_Wall(Convert.ToBoolean(rand.Next(2)));
 
             FR = input[4];
             LR = input[5];

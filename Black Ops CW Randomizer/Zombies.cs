@@ -85,7 +85,7 @@ namespace Black_Ops_CW_Randomizer
             else lst.Items.Add("Field Upgrade Not Randomized");
 
             ///Sets Perk Order
-            if (zomg.OrderedPerks.Trim() != null)
+            if (zomg.OrderedPerks != null)
             {
                 lst.Items.Add("Perk Order: ");
                 string[] spl = zomg.OrderedPerks.Split(',');
