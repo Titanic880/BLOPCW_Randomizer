@@ -104,7 +104,100 @@ namespace ZombiesLib
 
 
         #region Randomize
+        /// <summary>
+        /// Random field upgrade
+        /// </summary>
+        private void Field()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Randomize the order that you would obtain perks (comma seperated)
+        /// </summary>
+        /// <returns></returns>
+        private string PerkOrder()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Options :: Banned Specific, All but Specified banned, None
+        /// </summary>
+        /// <returns></returns>
+        private string Support()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Options :: Banned Specific, All but Specified banned, None
+        /// </summary>
+        /// <returns></returns>
+        private string Tactical()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Options :: Banned Specific, All but Specified banned, None
+        /// </summary>
+        /// <returns></returns>
+        private string Lethal()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Returns category and Weapon (Comma seperated)
+        /// </summary>
+        /// <returns></returns>
+        private string RandomWeapon()
+        {
+            int Category = rand.Next(WeaponCategories.Length-1);
+            string ret = WeaponCategories[Category] + ",";
+            ///Checks to see if the category is DLC, and if it is enabled
+            if (Category == 9 && DLC_Enabled)
+                ret += DLC[rand.Next(DLC.Length)];
+            ///Checks for the disabled DLC, and if the Category is selected
+            else if (Category == 9 && !DLC_Enabled)
+                //Recursion at its finest...
+                RandomWeapon();
+            else
+            {
+                switch (Category)
+                {
+                    case 0:
+                        ret += SMG[rand.Next(SMG.Length - 1)];
+                        break;
+                    case 1:
+                        ret += Shotgun[rand.Next(Shotgun.Length - 1)];
+                        break;
 
+                    case 2:
+                        ret += Pistol[rand.Next(Pistol.Length - 1)];
+                        break;
+                    case 3:
+                        ret += TacR[rand.Next(TacR.Length - 1)];
+                        break;
+                    case 4:
+                        ret += Sniper[rand.Next(Sniper.Length - 1)];
+                        break;
+                    case 5:
+                        ret += LMG[rand.Next(LMG.Length - 1)];
+                        break;
+                    case 6:
+                        ret += AR[rand.Next(AR.Length - 1)];
+                        break;
+                    case 7:
+                        ret += Melee[0];            //HARDCODED 0
+                        break;
+                    case 8:
+                        ret = explName;
+                        ret += Expl[rand.Next(Expl.Length)];
+                        break;
+                }
+            }
+
+
+
+            return ret;
+        }
         #endregion Randomize
     }
 }

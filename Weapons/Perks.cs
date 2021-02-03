@@ -89,6 +89,5 @@ namespace Weapons
             "Molotov",
             "Tomahawk"
         };
-
     }
 }

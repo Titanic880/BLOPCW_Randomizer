@@ -77,7 +77,7 @@ namespace Weapons
             "FFAR 1",
             "Groza"     //Battlepass weapon?
         };
-        protected string[] Melee = { "Knife" };
+        protected string[] Melee = { "Knife" };     //RANDOM IS HARDCODED TO ZERO, CHANGE WHEN ADDING ANOTHER
         /// <summary>
         /// Things that shoot that go boom
         /// </summary>
