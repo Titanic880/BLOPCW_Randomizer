@@ -37,10 +37,17 @@ namespace Black_Ops_CW_Randomizer
                 LR,
                 SR,
                 TR,
-                cbPerks.Checked
+                cbPerks.Checked,
+                cbWep.Checked
+            };
+            string[] a = 
+            {
+                combBoxLethal.Text, 
+                comBoxSupport.Text, 
+                comBoxTact.Text
             };
 
-            zomb.SetSettings(Settings);
+            zomb.SetSettings(Settings, a);
             BtnApply.Enabled = false;
             MessageBox.Show("New Settings Applied!");
         }

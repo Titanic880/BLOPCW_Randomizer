@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ZombiesLib
 {
@@ -32,7 +33,11 @@ namespace ZombiesLib
         /// <summary>
         /// Lethal
         /// </summary>
-        public bool LR { get; private set; } = false; 
+        public bool LR { get; private set; } = false;
+        /// <summary>
+        /// Weapon
+        /// </summary>
+        public bool Wep { get; private set; } = false;
 
         #region SafeGuards
         /// <summary>
@@ -60,12 +65,13 @@ namespace ZombiesLib
         {
             SetContent(Sets[0]);
             SetDLC(Sets[1]);
-            SetOutofCategory_Box(Sets[2]);
-            SetOutofCategory_Wall(Sets[3]);
+            if (Sets[2]) SetOutofCategory_Box(Convert.ToBoolean(rand.Next(2)));
+            if (Sets[3]) SetOutofCategory_Wall(Convert.ToBoolean(rand.Next(2)));
             FR = Sets[4];
             SR = Sets[5];
             TR = Sets[6];
             LR = Sets[7];
+            Wep = Sets[8];
         }
         public void TrueRandom()
         {
@@ -80,6 +86,7 @@ namespace ZombiesLib
             TR = rnd[3];
             randEquipment();
             PerkOrder();
+            RandomWeapon();
         }
         public void Random(bool[] input)
         {
@@ -96,6 +103,7 @@ namespace ZombiesLib
             TR = input[7];
             randEquipment();
             if(input[8]) PerkOrder();
+            if (input[9]) RandomWeapon();
         }
 
         /// <summary>
@@ -217,7 +225,11 @@ namespace ZombiesLib
         /// <returns></returns>
         private void PerkOrder()
         {
-            throw new NotImplementedException();
+            string[] random = perks.Perks.OrderBy(x => rand.Next(perks.Perks.Length-1)).ToArray();
+            OrderedPerks = null;
+            for(int i = 0; i < random.Length; i++)
+                OrderedPerks += (i+1)+": "+random[i] + ',';
+            OrderedPerks.Trim(',');
         }
 
         #endregion Randomize

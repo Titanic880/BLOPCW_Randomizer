@@ -43,6 +43,7 @@ namespace Black_Ops_CW_Randomizer
             this.cbDLC = new System.Windows.Forms.CheckBox();
             this.cbBox = new System.Windows.Forms.CheckBox();
             this.cbWall = new System.Windows.Forms.CheckBox();
+            this.cbWep = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // cbWeapon
@@ -74,9 +75,9 @@ namespace Black_Ops_CW_Randomizer
             this.cbPerks.AutoSize = true;
             this.cbPerks.Location = new System.Drawing.Point(3, 141);
             this.cbPerks.Name = "cbPerks";
-            this.cbPerks.Size = new System.Drawing.Size(120, 17);
+            this.cbPerks.Size = new System.Drawing.Size(133, 17);
             this.cbPerks.TabIndex = 2;
-            this.cbPerks.Text = "Random Perk Order";
+            this.cbPerks.Text = "Randomize Perk Order";
             this.cbPerks.UseVisualStyleBackColor = true;
             this.cbPerks.CheckedChanged += new System.EventHandler(this.Enable);
             this.cbPerks.CheckStateChanged += new System.EventHandler(this.Enable);
@@ -88,7 +89,7 @@ namespace Black_Ops_CW_Randomizer
             "Ban Specific",
             "All but Specific",
             "None"});
-            this.comBoxSupport.Location = new System.Drawing.Point(5, 180);
+            this.comBoxSupport.Location = new System.Drawing.Point(5, 203);
             this.comBoxSupport.Name = "comBoxSupport";
             this.comBoxSupport.Size = new System.Drawing.Size(163, 21);
             this.comBoxSupport.TabIndex = 3;
@@ -102,7 +103,7 @@ namespace Black_Ops_CW_Randomizer
             "Ban Specific",
             "All but Specific",
             "None"});
-            this.comBoxTact.Location = new System.Drawing.Point(5, 220);
+            this.comBoxTact.Location = new System.Drawing.Point(5, 243);
             this.comBoxTact.Name = "comBoxTact";
             this.comBoxTact.Size = new System.Drawing.Size(163, 21);
             this.comBoxTact.TabIndex = 4;
@@ -116,7 +117,7 @@ namespace Black_Ops_CW_Randomizer
             "Ban Specific",
             "All but Specific",
             "None"});
-            this.combBoxLethal.Location = new System.Drawing.Point(5, 259);
+            this.combBoxLethal.Location = new System.Drawing.Point(5, 282);
             this.combBoxLethal.Name = "combBoxLethal";
             this.combBoxLethal.Size = new System.Drawing.Size(163, 21);
             this.combBoxLethal.TabIndex = 5;
@@ -126,7 +127,7 @@ namespace Black_Ops_CW_Randomizer
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(3, 164);
+            this.lbl.Location = new System.Drawing.Point(3, 187);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(80, 13);
             this.lbl.TabIndex = 6;
@@ -135,7 +136,7 @@ namespace Black_Ops_CW_Randomizer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 204);
+            this.label2.Location = new System.Drawing.Point(3, 227);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 7;
@@ -144,7 +145,7 @@ namespace Black_Ops_CW_Randomizer
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 243);
+            this.label3.Location = new System.Drawing.Point(3, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 8;
@@ -152,7 +153,7 @@ namespace Black_Ops_CW_Randomizer
             // 
             // BtnApply
             // 
-            this.BtnApply.Location = new System.Drawing.Point(6, 286);
+            this.BtnApply.Location = new System.Drawing.Point(6, 309);
             this.BtnApply.Name = "BtnApply";
             this.BtnApply.Size = new System.Drawing.Size(162, 23);
             this.BtnApply.TabIndex = 9;
@@ -189,9 +190,9 @@ namespace Black_Ops_CW_Randomizer
             this.cbBox.AutoSize = true;
             this.cbBox.Location = new System.Drawing.Point(3, 49);
             this.cbBox.Name = "cbBox";
-            this.cbBox.Size = new System.Drawing.Size(129, 17);
+            this.cbBox.Size = new System.Drawing.Size(142, 17);
             this.cbBox.TabIndex = 12;
-            this.cbBox.Text = "Random Box Banning";
+            this.cbBox.Text = "Randomize Box Banning";
             this.cbBox.UseVisualStyleBackColor = true;
             this.cbBox.CheckedChanged += new System.EventHandler(this.Enable);
             this.cbBox.CheckStateChanged += new System.EventHandler(this.Enable);
@@ -201,17 +202,28 @@ namespace Black_Ops_CW_Randomizer
             this.cbWall.AutoSize = true;
             this.cbWall.Location = new System.Drawing.Point(3, 72);
             this.cbWall.Name = "cbWall";
-            this.cbWall.Size = new System.Drawing.Size(132, 17);
+            this.cbWall.Size = new System.Drawing.Size(145, 17);
             this.cbWall.TabIndex = 13;
-            this.cbWall.Text = "Random Wall Banning";
+            this.cbWall.Text = "Randomize Wall Banning";
             this.cbWall.UseVisualStyleBackColor = true;
             this.cbWall.CheckedChanged += new System.EventHandler(this.Enable);
             this.cbWall.CheckStateChanged += new System.EventHandler(this.Enable);
+            // 
+            // cbWep
+            // 
+            this.cbWep.AutoSize = true;
+            this.cbWep.Location = new System.Drawing.Point(3, 164);
+            this.cbWep.Name = "cbWep";
+            this.cbWep.Size = new System.Drawing.Size(123, 17);
+            this.cbWep.TabIndex = 14;
+            this.cbWep.Text = "Randomize Weapon";
+            this.cbWep.UseVisualStyleBackColor = true;
             // 
             // ZombieOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbWep);
             this.Controls.Add(this.cbWall);
             this.Controls.Add(this.cbBox);
             this.Controls.Add(this.cbDLC);
@@ -227,7 +239,7 @@ namespace Black_Ops_CW_Randomizer
             this.Controls.Add(this.cbField);
             this.Controls.Add(this.cbWeapon);
             this.Name = "ZombieOptions";
-            this.Size = new System.Drawing.Size(173, 316);
+            this.Size = new System.Drawing.Size(173, 340);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +261,6 @@ namespace Black_Ops_CW_Randomizer
         private System.Windows.Forms.CheckBox cbDLC;
         private System.Windows.Forms.CheckBox cbBox;
         private System.Windows.Forms.CheckBox cbWall;
+        private System.Windows.Forms.CheckBox cbWep;
     }
 }

@@ -29,18 +29,18 @@ namespace Black_Ops_CW_Randomizer
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lst = new System.Windows.Forms.ListBox();
             this.BtnRandomize = new System.Windows.Forms.Button();
             this.BtnOptions = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lst
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(210, 173);
-            this.listBox1.TabIndex = 0;
+            this.lst.FormattingEnabled = true;
+            this.lst.Location = new System.Drawing.Point(3, 3);
+            this.lst.Name = "lst";
+            this.lst.Size = new System.Drawing.Size(210, 173);
+            this.lst.TabIndex = 0;
             // 
             // BtnRandomize
             // 
@@ -68,7 +68,7 @@ namespace Black_Ops_CW_Randomizer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.BtnOptions);
             this.Controls.Add(this.BtnRandomize);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lst);
             this.Name = "Zombies";
             this.Size = new System.Drawing.Size(217, 235);
             this.ResumeLayout(false);
@@ -77,7 +77,7 @@ namespace Black_Ops_CW_Randomizer
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lst;
         private System.Windows.Forms.Button BtnRandomize;
         private System.Windows.Forms.Button BtnOptions;
     }
