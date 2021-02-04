@@ -73,7 +73,7 @@
             "Krig 6",
             "QBZ-83",
             "FFAR 1",
-            "Groza"     //Battlepass weapon?
+            "Groza"     //Battlepass weapon
         };
         protected string[] Melee = { "Knife" };     //RANDOM IS HARDCODED TO ZERO, CHANGE WHEN ADDING ANOTHER
         /// <summary>

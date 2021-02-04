@@ -87,7 +87,7 @@ namespace ZombiesLib
             LR = rnd[1];
             SR = rnd[2];
             TR = rnd[3];
-            randEquipment();
+            RandEquipment();
             PerkOrder();
             if (Convert.ToBoolean(rand.Next(2)))
             {
@@ -97,7 +97,7 @@ namespace ZombiesLib
         }
         public void Random()
         {
-            randEquipment();
+            RandEquipment();
             if(PerkOrd) PerkOrder();
             if (Wep) RandomWeapon();
         }
@@ -208,7 +208,7 @@ namespace ZombiesLib
         /// Options :: Banned Specific, All but Specified banned, None
         /// </summary>
         /// <returns></returns>
-        private void randEquipment()
+        private void RandEquipment()
         {
             if(FR) FieldRand = perks.FieldUpgrades[rand.Next(perks.FieldUpgrades.Length - 1)];
             if(SR) SupportRand = perks.Support[rand.Next(perks.Support.Length - 1)];

@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Windows.Forms;
 using ZombiesLib;
+using System.Windows.Forms;
+
 namespace Black_Ops_CW_Randomizer
 {
     public partial class ZombieOptions : UserControl
