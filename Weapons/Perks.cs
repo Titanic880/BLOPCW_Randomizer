@@ -44,7 +44,8 @@
             "Quick Revive",
             "Stamin-Up",
             "Elemental Pop",
-            "Deadshot Daiquiri"
+            "Deadshot Daiquiri",
+            "Tombstone"
         };
         public string[] FieldUpgrades { get; } =
 {
@@ -61,7 +62,9 @@
             "War Machine",
             "Cruise Missle",
             "Chopper Gunner",
-            "Self Revive"
+            "Self Revive",
+            "Napalm",
+            "Artillery"
         };
     }
     /// <summary>
